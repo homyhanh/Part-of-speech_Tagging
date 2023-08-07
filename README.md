@@ -11,6 +11,4 @@ Example
 
 All sentences are manually labeled based on the Penn Treebank tagset. 
 
-![Screenshot 2020-11-12 at 3 16 00 PM](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/18625947-2ed0-4194-a46c-eef2944ecbf9)
-
-
+<img src="https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/82110bba-204a-4f85-8e23-07732dc5fe4e" alt="..." width="800" />

@@ -1,0 +1,45 @@
+John/NNP lives/VBZ in/IN London/NNP ./.
+Did/VBD Mary/NNP buy/VB a/DT dress/NN yesterday/RB ?/.
+She/PRP does/VBZ n't/RB eat/VB apple/NN ./.
+Are/VBP you/PRP hungry/JJ now/RB ?/.
+The/DT train/NN was/VBD late/JJ ./.
+I/PRP love/VBP my/PRP$ new/JJ pet/NN ./.
+Where/WRB are/VBP we/PRP meeting/VBG ?/.
+I/PRP like/VBP cats/NNS very/RB much/RB ./.
+His/PRP$ daughter/NN does/VBZ not/RB like/VB studying/VBG ./.
+Should/MD we/PRP leave/VB now/RB ?/.
+Do/VBP you/PRP think/VB we/PRP should/MD go/VB to/TO Hoa/NNP 's/POS party/NN tonight/RB ?/.
+He/PRP bought/VBD all/PDT the/DT books/NNP which/WDT are/VBP needed/VBN for/IN the/DT next/JJ exam/NN ./.
+I/PRP bought/VBD a/DT birthday/NN present/NN for/RB my/PRP$ mother/NN ./.
+The/DT teacher/NN thanked/VBD the/DT students/NNS who/WP had/VB given/VBN her/PRP$ some/DT flowers/NNS ./.
+She/PRP did/VBD n't/RB to/TO know/VB whose/WP$ car/NN was/VBD parked/VBN in/IN front/IN of/IN her/PRP$ house/NN ./.
+This/DT might/MD be/VB the/DT last/JJ time/NN we/PRP see/VBP each/DT other/JJ ./.
+The/DT harder/JJR you/PRP study/VBP the/DT higher/JJR marks/NNS you/PRP make/VBP ./.
+Lan/NNP 's/POS friend/NN is/VBZ one/CD of/IN the/DT tallest/RBS girls/NNS in/IN her/PRP$ class/NN ./.
+I/PRP will/MD give/VB him/PRP your/PRP$ present/NN when/WRB he/PRP comes/VBZ back/IN ./.
+Nam/NNP will/MD have/VB been/VBN waiting/VBG for/IN an/DT hour/NN by/IN the/DT time/NN I/PRP meet/VBP him/PRP$ ./.
+All/PDT the/DT young/JJ girls/NNS love/VBP this/JJ interesting/JJ game/NN ./.
+He/PRP left/VBD the/DT house/NN quietly/RB so/IN he/PRP did/VBD n't/RB wake/VB anyone/NN ./.
+You/PRP should/MD go/VB to/TO the/DT bank/NN for/IN more/JJR money/NN ./.
+I/PRP do/VBP n't/RB know/VB which/WDT book/NN you/PRP like/VB better/RBR ./.
+Mia/NNP has/VBZ been/VBN reading/VBG War/NP and/CC Peace/NP for/IN a/DT month/NN now/RB ./.
+When/WRB Charles/NNP finally/RB arrived/VBD I/PRP was/VBD on/IN my/PRP$ way/NN ?/.
+Were/VBD the/DT students/NNS satisfied/JJ with/IN the/DT results/NNS they/PRP got/VBD ?/.
+The/DT English/NNPS tend/VBP to/TO be/VB inspired/JJ cooks/NNS because/IN of/IN their/PRPS culture/NN ./.
+Justin/NNP 's/POS sister/NN was/VBD unhappy/JJ so/RB she/PRP asked/VBD to/TO be/VB transferred/VBD ./.
+This/DT is/VBZ one/CD of/IN the/DT best/JJS movies/NNS I/PRP have/VB ever/RB seen/VBN ./.
+I/PRP saw/VBD someone/PRP on/IN the/DT hill/NN with/IN a/DT telescope/NN ./.
+Is/VBZ there/EX a/DT black/JJ cat/NN on/IN the/DT carpet/NN in/IN my/PRP$ bedroom/NN ?/.
+I/PRP am/VBP going/VBG to/TO eat/VB spaghetti/NN with/IN meatballs/NNS from/IN Italia/NNP next/JJ month/NN ./.
+My/PRP$ friend/NN buys/VBZ books/NNS for/IN children/NNS from/IN local/JJ orphanage/NN ./.
+All/DT young/JJ men/NNS and/CC women/NNS should/MD take/VB responsibility/NN for/IN promoting/VBG gender/NN equality/NN ./.
+Lan/NNP 's/POS brother/NN said/VBD he/PRP usually/RB played/VBD football/NN in/IN the/DT park/NN everyday/JJ ./.
+She/PRP invited/VBD me/PRP to/TO go/VB out/IN for/IN a/DT cup/NN of/IN coffee/NN on/IN the/DT weekend/NN ./.
+The/DT cat/NN chased/VBD the/DT mouse/NN until/IN it/PRP stumbled/VBD and/CC fell/VBD ./.
+Jane/NNP hit/VBD the/DT boy/NN with/IN a/JJS very/RB thick/JJ book/NN ./.
+The/DT lecturer/NN said/VBD on/IN Friday/DT she/PRP would/MD take/VB a/DT quiz/NN ./.
+Does/VBZ Annie/NNP listen/VB to/TO rock/JJ music/NN more/RBR often/RB than/IN her/PRP$ father/NN ?/.
+You/PRP must/MD put/VB the/DT bottle/NN on/IN the/DT table/NN in/IN the/DT kitchen/NN now/RB ./.
+Guma/NNP ate/VBD an/DT ice/NN cream/NN with/IN fruits/NNS from/IN Chennai/NNP ./.
+Go/VB straight/RB ahead/RB and/CC turn/VB right/RB at/IN the/DT first/JJ corner/NN ./.
+The/DT dog/NN chased/VBD the/DT cat/NN but/CC it/PRP ran/VBD so/RB quickly/RB ./.

@@ -31,6 +31,12 @@ There are 45 sentences that are manually labeled based on the Penn Treebank tags
 
 – Triggering environments (feature types): unlexicalized or lexicalized
 
+# Handle unknown words
+1. Random POS – tag: randomize the label among all existing labels
+2. Most probable POS–tag: find the most frequent POS-tag and assume that unknown words always have this POS-tag. 
+3. Overall POS distribution: the probability of an unknown word considering different labels will be similar to the probability distribution of the labels computed in the training set. In other words, the probability of an unknown word labeled q will be equal to the probability of a known word labeled q.
+4. Hapax legomena: the distribution of POS-tags over unknown words is similar to the distribution over words that occur only once in the training set. These words are known as hapax legonema.
+5. Regex tagger: use regular expressions to find the parts that need to be tagged.
 # Result
 
 Rules are learned from TBL

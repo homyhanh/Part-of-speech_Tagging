@@ -31,4 +31,26 @@ There are 45 sentences that are manually labeled based on the Penn Treebank tags
 
 – Triggering environments (feature types): unlexicalized or lexicalized
 
- 
+# Result
+
+Rules are learned from TBL
+
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/df40ab51-c20a-4e26-8d8a-85808fcae8be)
+
+Use accuracy to evaluate the model including all tags, known tags, and unknown tags.
+
+- Without TBL algorithm
+
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/d9bea4df-c51b-4d22-bdec-372e7a209ef6)
+
+- With TBL algorithm
+
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/9cbba3f9-371c-42c1-83ff-f9588bde3e36)
+
+## Example:
+
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/e65a91bc-7212-48a5-824d-c1df44298446)
+
+Predict
+
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/e7f1fef6-5316-45d7-b8f2-41d925f421c2)

@@ -47,16 +47,14 @@ Use accuracy to evaluate the model including all tags, known tags, and unknown t
 
 - Without TBL algorithm
 
-![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/d9bea4df-c51b-4d22-bdec-372e7a209ef6)
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/97e2c9fc-4d34-4439-9583-4c4f46eb1ae0)
 
 - With TBL algorithm
 
-![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/9cbba3f9-371c-42c1-83ff-f9588bde3e36)
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/3224adbe-549c-44b6-8ac7-ae0809554426)
 
 ## Example:
 
-![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/e65a91bc-7212-48a5-824d-c1df44298446)
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/540c0556-644b-4270-b3e8-2a1bc16515b1)
 
-Predict
 
-![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/e7f1fef6-5316-45d7-b8f2-41d925f421c2)

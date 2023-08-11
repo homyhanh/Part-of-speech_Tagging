@@ -39,9 +39,14 @@ There are 45 sentences that are manually labeled based on the Penn Treebank tags
 5. Regex tagger: use regular expressions to find the parts that need to be tagged.
 # Result
 
+Template
+
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/dfaee1e3-308b-4902-9a0a-646baa07ddab)
+
 Rules are learned from TBL
 
-![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/df40ab51-c20a-4e26-8d8a-85808fcae8be)
+![image](https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/d86d3c75-cf4e-465e-9c4a-30ce57830341)
+
 
 Use accuracy to evaluate the model including all tags, known tags, and unknown tags.
 

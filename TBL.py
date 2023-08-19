@@ -28,7 +28,15 @@ training_data = data[:35]
 gold_data = data[35:]
 testing_data = [untag(s) for s in gold_data]
 
-st.title('Part of speech Tagging')
+st.title('PART OF SPEECH TAGGING')
+st.header('Introduction')
+pos_tagger = ''' Part-of-speech tagging (POS tagging) is the task of tagging a word in a text with its part of speech. A part of speech is a category of words with similar grammatical properties. \n
+Transformation Based Learning is algorithm used to tag POS in an English sentence. \n
+Example: '''
+st.write(pos_tagger)
+df = pd.DataFrame({'Word': ['John', 'lives', 'in', 'London', '.'], 'Tag': ['NNP', 'VBZ', 'IN', 'NNP', '.']} ).T
+st.write(df)
+st.header('Code')
 
 # Define template
 def POS (a):
@@ -224,7 +232,8 @@ class Transformation_Based_Learning():
         predict_tag.append(score)
     return predict_tag
 
-option = st.selectbox('**Choose algorithm to handle unknown word**',
+
+option = st.selectbox('**Choose option to handle unknown words**',
     ('Random POS-tag', 'Most probable POS-tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))
 dict_option = {'Random POS-tag': 0, 'Most probable POS-tag': 1, 'Overall POS distribution': 2, 
                'Hapax legomena': 3, 'Regex tagger': 4}
@@ -233,13 +242,13 @@ valid_or_not = st.selectbox('**Do you use validation?**',
     ('True', 'False'))
 
 templates = []
-number = st.number_input('**Insert a number template**', step = 1)
+number = st.number_input('**Insert a number template you want to use**', step = 1)
 for i in range(number):
     temp = st.selectbox(
         'Template ' + str(i+1) + ' (Choose rules in lexical tagging or in contextual tagging)',
         ('Pos', 'Word'))
 
-    coeff = st.text_input('Coefficient ' + str(i+1) + ' (Enter coefficient, _ex: -2, -1 or -1_)')
+    coeff = st.text_input('Coefficient ' + str(i+1) + ' (Insert coefficient, _ex: -2, -1 or -1_)')
     if temp == 'Pos':
        templates.append(POS(list(map(int, coeff.split(',')))))
     else:
@@ -247,19 +256,31 @@ for i in range(number):
 
 tbl = Transformation_Based_Learning()
 data = tbl.train_valid_split(training_data, valid=valid_or_not)
-st.write('Rules:\n')
+st.subheader('Rules')
 rules = tbl.fit (training_data, templates, data, dict_option[option])
 
 # Without TBL algorithm
 pred = tbl.predict(testing_data, rules, dict_option[option], tbl = False, accuracy = True)
+st.subheader('Results')
 st.write('Without TBL algorithm')
-st.write (pd.DataFrame({'Accuracy': list (pred[-1])}, index = ['Known_tag', 'Unknown_tag', 'All_tag']).T)
+without_tbl = pd.DataFrame({'Accuracy': list (pred[-1])}, index = ['Known_tag', 'Unknown_tag', 'All_tag']).T
+st.dataframe(without_tbl)
 
 # With TBL algorithm
 pred = tbl.predict(testing_data, rules, dict_option[option], tbl = True, accuracy = True)
 st.write('With TBL algorithm')
-st.write (pd.DataFrame({'Accuracy': list (pred[-1])}, index = ['Known_tag', 'Unknown_tag', 'All_tag']).T)
+with_tbl = pd.DataFrame({'Accuracy': list (pred[-1])}, index = ['Known_tag', 'Unknown_tag', 'All_tag']).T
+st.dataframe(with_tbl)
 
-num = random.randint(0, len(testing_data))
-st.write ('Result')
+num = random.randint(0, len(testing_data)-1)
+st.subheader('Predictions')
+st.write('Predict sentence in test data')
 st.write (pd.DataFrame({'Sentence': testing_data[num], 'True tag': np.array((gold_data[num]))[:, 1].tolist(), 'Predicted_tag': pred[num]}).T)
+
+new_sentence = st.text_input('Predict new sentence')
+new_word = new_sentence.split()
+pred_tag = tbl.predict([new_word], rules, dict_option[option], tbl = True, accuracy = False)
+sentence = []
+for i in range (len (new_word)):
+  sentence.append (new_word[i] + '/' + pred_tag[0][i])
+st.write (' '.join(sentence))

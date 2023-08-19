@@ -1,6 +1,6 @@
 import streamlit as st
-from nltk.tag import untag, RegexpTagger
 import nltk
+from nltk.tag import untag, RegexpTagger
 import numpy as np
 import pandas as pd
 import random

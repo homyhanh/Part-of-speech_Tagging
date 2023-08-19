@@ -1,5 +1,3 @@
-python -m pip install -r requirements.txt
-
 import streamlit as st
 import nltk
 from nltk.tag import untag, RegexpTagger

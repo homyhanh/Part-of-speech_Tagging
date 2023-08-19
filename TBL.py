@@ -74,12 +74,14 @@ def handle_unknown_word(word, corpus_tuple, all_tags, correct_tag, choice):
             tags = np.concatenate(correct_tag).tolist()
             return max(set (tags),key = tags.count)
         elif (choice ==2):
-            return random.choice(correct_tag)
+            return random.choice(np.concatenate(correct_tag))
         elif (choice == 3):
             tags = []
-            for i in range (len (corpus_tuple)):
-                if corpus_tuple.count (corpus_tuple[i]) == 1:
-                    tags.append (correct_tag[i])
+            unique_values, counts = np.unique(np.concatenate(corpus_tuple), return_counts=True)
+            for i in range (len (unique_values)):
+                if counts[i] == 1:
+                  id = np.concatenate (corpus_tuple).tolist().index(unique_values[i])
+                  tags.append(np.concatenate(correct_tag)[id])
             return random.choice(tags)
         else:
             return baseline.tag([word])[0][1]
@@ -224,7 +226,7 @@ class Transformation_Based_Learning():
     return predict_tag
 
 option = st.selectbox('**Choose algorithm to handle unknown word**',
-    ('Random POS - tag', 'Random POS – tag', 'Random POS – tag', 'Hapax legomena', 'Regex tagger'))
+    ('Random POS - tag', 'Most probable POS–tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))
 dict_option = {'Random POS - tag': 0, 'Random POS – tag': 1, 'Random POS – tag': 2, 
                'Hapax legomena': 3, 'Regex tagger': 4}
 

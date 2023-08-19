@@ -225,8 +225,8 @@ class Transformation_Based_Learning():
     return predict_tag
 
 option = st.selectbox('**Choose algorithm to handle unknown word**',
-    ('Random POS - tag', 'Most probable POS – tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))
-dict_option = {'Random POS - tag': 0, 'Most probable POS – tag': 1, 'Overall POS distribution': 2, 
+    ('Random POS-tag', 'Most probable POS-tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))
+dict_option = {'Random POS-tag': 0, 'Most probable POS-tag: 1, 'Overall POS distribution': 2, 
                'Hapax legomena': 3, 'Regex tagger': 4}
 
 valid_or_not = st.selectbox('**Do you use validation?**',

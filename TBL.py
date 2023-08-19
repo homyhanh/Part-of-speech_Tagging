@@ -1,3 +1,5 @@
+python -m pip install -r requirements.txt
+
 import streamlit as st
 import nltk
 from nltk.tag import untag, RegexpTagger
@@ -18,7 +20,6 @@ backoff = RegexpTagger([
 ])
 baseline = backoff
 
-file = st.file_uploader("Choose a file")
 f = open('Datasets.txt', "r")
 
 sentences = f.read().split('\n')[:-1]

@@ -19,7 +19,7 @@ backoff = RegexpTagger([
   (r'.*', 'NN')                      # nouns (default)
 ])
 baseline = backoff
-f = open('C:/Users/hanhm/Part-of-speech_Tagging/Datasets.txt', "r")
+f = open('Datasets.txt', "r")
 
 sentences = f.read().split('\n')[:-1]
 data = [[nltk.tag.str2tuple(word) for word in sentence.split()] for sentence in sentences]

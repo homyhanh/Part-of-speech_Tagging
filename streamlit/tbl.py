@@ -1,4 +1,3 @@
-import streamlit as st
 import nltk
 from nltk.tag import untag, RegexpTagger
 import numpy as np
@@ -17,27 +16,6 @@ backoff = RegexpTagger([
   (r'.*', 'NN')                      # nouns (default)
 ])
 baseline = backoff
-
-f = open('Datasets.txt', "r")
-
-sentences = f.read().split('\n')[:-1]
-data = [[nltk.tag.str2tuple(word) for word in sentence.split()] for sentence in sentences]
-random.shuffle(data)
-
-training_data = data[:35]
-gold_data = data[35:]
-testing_data = [untag(s) for s in gold_data]
-
-st.title('PART OF SPEECH TAGGING')
-st.header('Introduction')
-pos_tagger = ''' Part-of-speech tagging (POS tagging) is the task of tagging a word in a text with its part of speech. A part of speech is a category of words with similar grammatical properties. \n
-Transformation Based Learning is algorithm used to tag POS in an English sentence. \n
-Example: '''
-st.write(pos_tagger)
-df = pd.DataFrame({'Word': ['John', 'lives', 'in', 'London', '.'], 'Tag': ['NNP', 'VBZ', 'IN', 'NNP', '.']} ).T
-st.write(df)
-st.header('Code')
-
 # Define template
 def POS (a):
   return a, 'POS'
@@ -186,8 +164,6 @@ class Transformation_Based_Learning():
       if best_score > 0:
 
         word_pos, f_tag, t_tag = best_instance
-        best_rule = "Change tag FROM :: '" + f_tag + "' TO :: '" + t_tag + "'" + " IF " + template[1] + ": " + "'" + word_pos + "'" + str(template[0])
-        st.write (best_rule)
         transforms_queue.append((best_instance, template))
         current_tag = self.apply_transform(f_tag, t_tag, template, word_pos, current_tag, corpus_tuple)
       else:
@@ -208,15 +184,16 @@ class Transformation_Based_Learning():
     rules = self.TBL(self.all_tags, self.all_words, correct_tag, corpus_tuple, templates, data, choice)
     return rules
 
-  def predict (self, corpus_tuple, rules, choice, tbl = False, accuracy = False):
-    gold_tag = create_gold_tag (gold_data)
-    predict_tag = self.initialize_with_most_likely_tag(corpus_tuple, data, self.all_tags, gold_tag, choice)
+  def predict (self, gold_data, data, corpus_tuple, training_data, rules, choice, tbl = False, accuracy = False):
+    _ , correct_tag = create_corpus(training_data)
+    predict_tag = self.initialize_with_most_likely_tag(corpus_tuple, data, self.all_tags, correct_tag, choice)
     if tbl:
       for rule in rules:
         f_tag, t_tag, template, word_pos = rule[0][1], rule [0][2], rule[1], rule[0][0]
         predict_tag = self.apply_transform(f_tag, t_tag, template, word_pos, predict_tag, corpus_tuple)
 
     if accuracy:
+        gold_tag = create_gold_tag (gold_data)
         known_data = unknown_data = predict_true_known_data = predict_true_unknown_data = 0
         for i in range (len(gold_tag)):
           for j in range (len(gold_tag[i])):
@@ -231,56 +208,3 @@ class Transformation_Based_Learning():
         score = (predict_true_known_data/known_data, predict_true_unknown_data/ unknown_data, (predict_true_known_data + predict_true_unknown_data)/(known_data+unknown_data))
         predict_tag.append(score)
     return predict_tag
-
-
-option = st.selectbox('**Choose option to handle unknown words**',
-    ('Random POS-tag', 'Most probable POS-tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))
-dict_option = {'Random POS-tag': 0, 'Most probable POS-tag': 1, 'Overall POS distribution': 2, 
-               'Hapax legomena': 3, 'Regex tagger': 4}
-
-valid_or_not = st.selectbox('**Do you use validation?**',
-    ('True', 'False'))
-
-templates = []
-number = st.number_input('**Insert a number template you want to use**', step = 1)
-for i in range(number):
-    temp = st.selectbox(
-        'Template ' + str(i+1) + ' (Choose rules in lexical tagging or in contextual tagging)',
-        ('Pos', 'Word'))
-
-    coeff = st.text_input('Coefficient ' + str(i+1) + ' (Insert coefficient, _ex: -2, -1 or -1_)')
-    if temp == 'Pos':
-       templates.append(POS(list(map(int, coeff.split(',')))))
-    else:
-       templates.append(WORD(list(map(int, coeff.split(',')))))
-
-tbl = Transformation_Based_Learning()
-data = tbl.train_valid_split(training_data, valid=valid_or_not)
-st.subheader('Rules')
-rules = tbl.fit (training_data, templates, data, dict_option[option])
-
-# Without TBL algorithm
-pred = tbl.predict(testing_data, rules, dict_option[option], tbl = False, accuracy = True)
-st.subheader('Results')
-st.write('Without TBL algorithm')
-without_tbl = pd.DataFrame({'Accuracy': list (pred[-1])}, index = ['Known_tag', 'Unknown_tag', 'All_tag']).T
-st.dataframe(without_tbl)
-
-# With TBL algorithm
-pred = tbl.predict(testing_data, rules, dict_option[option], tbl = True, accuracy = True)
-st.write('With TBL algorithm')
-with_tbl = pd.DataFrame({'Accuracy': list (pred[-1])}, index = ['Known_tag', 'Unknown_tag', 'All_tag']).T
-st.dataframe(with_tbl)
-
-num = random.randint(0, len(testing_data)-1)
-st.subheader('Predictions')
-st.write('Predict sentence in test data')
-st.write (pd.DataFrame({'Sentence': testing_data[num], 'True tag': np.array((gold_data[num]))[:, 1].tolist(), 'Predicted_tag': pred[num]}).T)
-
-new_sentence = st.text_input('Predict new sentence')
-new_word = new_sentence.split()
-pred_tag = tbl.predict([new_word], rules, dict_option[option], tbl = True, accuracy = False)
-sentence = []
-for i in range (len (new_word)):
-  sentence.append (new_word[i] + '/' + pred_tag[0][i])
-st.write (' '.join(sentence))

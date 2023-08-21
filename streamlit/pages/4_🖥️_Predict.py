@@ -21,7 +21,8 @@ genre = st.radio(
     "Choose your option",
     ('Instructions', 'Testing data', 'New sentence'))
 if genre == 'Instructions':
-     st.write('If you want to check sentence provided, click "Testing data". Besides, you can make a new sentence by click "New sentence"')
+    st.write('If you want to check sentence provided, click "Testing data". You can choose any sentence available in the test dataset')
+    st.write ('Besides, you can make a new sentence by click "New sentence"')
 elif genre == 'Testing data':
     option = st.selectbox('**Choose option to handle unknown words**',
     ('Random POS-tag', 'Most probable POS-tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))

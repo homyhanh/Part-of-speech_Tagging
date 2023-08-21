@@ -7,6 +7,7 @@ import random
 import math 
 from tbl import *
 
+st.subheader ('Training')
 f = open('Datasets.txt', "r")
 sentences = f.read().split('\n')
 data_original = [[nltk.tag.str2tuple(word) for word in sentence.split()] for sentence in sentences]

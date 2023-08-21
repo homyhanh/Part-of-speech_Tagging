@@ -19,7 +19,7 @@ for sentence in range (len (testing_data)):
 
 genre = st.radio(
     "Choose your option",
-    ('Instructions', Testing data', 'New sentence'))
+    ('Instructions', 'Testing data', 'New sentence'))
 if genre == 'Instructions':
      st.write('If you want to check sentence provided, click "Testing data". Besides, you can make a new sentence by click "New sentence"')
 elif genre == 'Testing data':

@@ -3,7 +3,7 @@ import random
 import numpy as np
 import pandas as pd
 
-
+st.subheader('Prediction')
 training_data = st.session_state.training_data
 testing_data = st.session_state.testing_data
 gold_data = st.session_state.gold_data
@@ -19,7 +19,7 @@ for sentence in range (len (testing_data)):
 
 genre = st.radio(
     "Choose your option",
-    ('Testing data', 'New sentence'))
+    ('New sentence', 'Testing data'))
 
 if genre == 'Testing data':
     option = st.selectbox('**Choose option to handle unknown words**',

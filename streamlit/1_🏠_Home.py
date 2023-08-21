@@ -25,7 +25,7 @@ st.header('Transformation-based Tagging')
 st.write('Transformation-based tagging (TBT) is a method of part-of-speech (POS) tagging that uses a series of rules to transform the tags of words in a text. In TBT, a set of rules is defined to transform the tags of words in a text based on the context in which they appear.')
 st.write('TBT can be more accurate than rule-based tagging, especially for tasks with complex grammatical structures. However, it can be more computationally intensive and requires a larger set of rules to achieve good performance.')
 st.header('Datasets')
-f = open('C:/Users/hanhm/Part-of-speech_Tagging/Datasets.txt', "r")
+f = open('Datasets.txt', "r")
 sentences = f.read().split('\n')[:-1]
 number = len(sentences) 
 sentence = sentences[-1]

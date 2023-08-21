@@ -210,7 +210,7 @@ from tbl import *
 #         score = (predict_true_known_data/known_data, predict_true_unknown_data/ unknown_data, (predict_true_known_data + predict_true_unknown_data)/(known_data+unknown_data))
 #         predict_tag.append(score)
 #     return predict_tag
-f = open('C:/Users/hanhm/Part-of-speech_Tagging/Datasets.txt', "r")
+f = open('Datasets.txt', "r")
 
 sentences = f.read().split('\n')[:-1]
 data_original = [[nltk.tag.str2tuple(word) for word in sentence.split()] for sentence in sentences]

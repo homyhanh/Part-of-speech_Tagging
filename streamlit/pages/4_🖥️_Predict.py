@@ -3,7 +3,7 @@ import random
 import numpy as np
 import pandas as pd
 
-st.subheader('Prediction')
+st.header('Prediction')
 training_data = st.session_state.training_data
 testing_data = st.session_state.testing_data
 gold_data = st.session_state.gold_data
@@ -19,9 +19,10 @@ for sentence in range (len (testing_data)):
 
 genre = st.radio(
     "Choose your option",
-    ('New sentence', 'Testing data'))
-
-if genre == 'Testing data':
+    ('Instructions', Testing data', 'New sentence'))
+if genre == 'Instructions':
+     st.write('If you want to check sentence provided, click "Testing data". Besides, you can make a new sentence by click "New sentence"')
+elif genre == 'Testing data':
     option = st.selectbox('**Choose option to handle unknown words**',
     ('Random POS-tag', 'Most probable POS-tag', 'Overall POS distribution', 'Hapax legomena', 'Regex tagger'))
     option_sentence = st.selectbox('**Choose sentence**', dict_sentence)

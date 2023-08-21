@@ -25,7 +25,7 @@ I/PRP do/VBP n't/RB know/VB which/WDT book/NN you/PRP like/VB better/RBR ./.
 Mia/NNP has/VBZ been/VBN reading/VBG War/NP and/CC Peace/NP for/IN a/DT month/NN now/RB ./.
 When/WRB Charles/NNP finally/RB arrived/VBD I/PRP was/VBD on/IN my/PRP$ way/NN ?/.
 Were/VBD the/DT students/NNS satisfied/JJ with/IN the/DT results/NNS they/PRP got/VBD ?/.
-The/DT English/NNPS tend/VBP to/TO be/VB inspired/JJ cooks/NNS because/IN of/IN their/PRPS culture/NN ./.
+The/DT English/NNPS tend/VBP to/TO be/VB inspired/JJ cooks/NNS because/IN of/IN their/PRP$ culture/NN ./.
 Justin/NNP 's/POS sister/NN was/VBD unhappy/JJ so/RB she/PRP asked/VBD to/TO be/VB transferred/VBD ./.
 This/DT is/VBZ one/CD of/IN the/DT best/JJS movies/NNS I/PRP have/VB ever/RB seen/VBN ./.
 I/PRP saw/VBD someone/PRP on/IN the/DT hill/NN with/IN a/DT telescope/NN ./.
@@ -43,3 +43,18 @@ You/PRP must/MD put/VB the/DT bottle/NN on/IN the/DT table/NN in/IN the/DT kitch
 Guma/NNP ate/VBD an/DT ice/NN cream/NN with/IN fruits/NNS from/IN Chennai/NNP ./.
 Go/VB straight/RB ahead/RB and/CC turn/VB right/RB at/IN the/DT first/JJ corner/NN ./.
 The/DT dog/NN chased/VBD the/DT cat/NN but/CC it/PRP ran/VBD so/RB quickly/RB ./.
+The/DT long/JJ and/CC ever-increasing/JJ column/NN of/IN sportsmen/NN is/VBZ now/RB moving/VBG into/IN a/DT new/JJ era/NN ./.
+The/DT autofluorescence/NN from/IN the/DT walls/NN of/IN the/DT xylem/NN cells/NNS was/VBD particularly/RB brilliant/JJ ./.
+And/CC time/NN after/ADP time/NN she/PRP really/RB belted/VBD out/IN her/PRP$ songs/NNS ./.
+Women/NNS did/VBD n't/RB use/VB white/JJ face/NN powder/NN nowadays/RB ,/, he/PRP recalled/VBD ./.
+This/DT explained/VB a/DT great/JJ deal/NN ./.
+lovely/JJ old/JJ villages/NNS and/CC a/DT rugged/JJ seashore/NN among/IN its/PRP$ many/JJ worthwhile/JJ sights/NN ./.
+When/WRB irregularity/NN and/CC variation/NN prevent/VBP summarizing/VBG ,/, information/NN is/VBZ written/VBN in/IN complete/JJ detail/NN ./.
+From/IN 1896/CD until/IN 1910/CD John/NNP was/VBD manager/NN of/IN Western/JJ Union/NNP at/IN the/DT Center/NNP in/IN the/DT drugstore/NN he/PRP purchased/VBD from/IN Clark/NNG Wait/NNG ./.
+If/CC the/DT old/JJ fool/NN argues/VBZ about/IN the/DT price/NN ,/, tell/VB him/PRP I/PRP shall/VB order/VB my/PRP$ husband/NN not/RB to/TO treat/VB him/PRP as/IN a/DT patient/NN any/DT longer/JJR ./.
+and/CC her/PRP$ close/JJ knowledge/NN of/IN individual/JJ students/NNS ./.
+He/PRP wondered/VBD if/CC he/PRP might/VB bag/VB a/DT tourist/NN ,/, but/CC they/PRP looked/VBD frightened/VBD of/IN him/PRP ./.
+They/PRP appeared/VBD to/TO be/VB the/DT enemy/NN ./.
+G./NNP Mennen/NNP Williams/NNP is/VBZ learning/VBG the/DT difficulties/NNS of/IN diplomacy/NN rapidly/RB ./.
+What/WP explains/VBZ this/JJ uni-directional/JJ paralysis/NN ?/. ?/.
+At/IN the/DT base/NN of/IN the/DT rocky/JJ hillside/NN ,/, they/PRP left/VBD their/PRP$ horses/NNS and/CC climbed/VBD on/IN foot/NN ./.

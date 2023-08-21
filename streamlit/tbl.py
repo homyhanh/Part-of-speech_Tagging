@@ -3,6 +3,7 @@ from nltk.tag import untag, RegexpTagger
 import numpy as np
 import pandas as pd
 import random
+import math
 
 backoff = RegexpTagger([
   (r'^-?[0-9]+(\.[0-9]+)?$', 'CD'),  # cardinal numbers
@@ -174,7 +175,8 @@ class Transformation_Based_Learning():
     if not valid:
       data = unigram(training_data)
     else:
-      data = unigram(training_data[:30])
+      k = math.floor (len(training_data) * 0.8)
+      data = unigram(training_data[:k])
     self.all_words = np.unique (data['Word'].values)
     self.all_tags = np.unique (data['POS'].values)
     return data

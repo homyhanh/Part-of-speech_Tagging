@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import random
 st.set_page_config(
    page_title= "Part of speech Tagging",
    page_icon= ":bookmark_tabs:"
@@ -26,9 +26,9 @@ st.write('Transformation-based tagging (TBT) is a method of part-of-speech (POS)
 st.write('TBT can be more accurate than rule-based tagging, especially for tasks with complex grammatical structures. However, it can be more computationally intensive and requires a larger set of rules to achieve good performance.')
 st.header('Datasets')
 f = open('Datasets.txt', "r")
-sentences = f.read().split('\n')[:-1]
+sentences = f.read().split('\n')
 number = len(sentences) 
-sentence = sentences[-1]
+sentence = sentences[random.rand(0, number - 1)]
 st.write(f'There are {number} sentences that are manually labeled based on the Penn Treebank tagset.')
 
 st.image('https://github.com/homyhanh/Part-of-speech_Tagging/assets/79818022/82110bba-204a-4f85-8e23-07732dc5fe4e')
